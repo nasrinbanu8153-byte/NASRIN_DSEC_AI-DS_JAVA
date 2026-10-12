@@ -1,0 +1,95 @@
+EX.1:
+
+import java.util.*;
+public class Main 
+{
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int a = sc.nextInt();
+        sc.nextLine();
+        String s = sc.nextLine();
+        float f = sc.nextFloat();
+        System.out.println("Hello World");
+        System.out.println(a);
+        System.out.println(s);
+        System.out.println(f);
+    }
+}   
+
+OUTPUT:
+10
+nasrin
+10.0
+Hello World
+10
+nasrin
+10.0
+
+
+
+EX.2:
+
+
+import java.util.*;
+public class Main 
+{
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int a = sc.nextInt();
+        sc.nextLine();
+        String s = sc.nextLine();
+        String b = sc.nextLine();
+        float f = sc.nextFloat();
+        int c = sc.nextInt();
+        System.out.println("EMPLOYEE DETAILS");
+        System.out.println(a);
+        System.out.println(s);
+        System.out.println(b);
+        System.out.println(f);
+        System.out.println(c);
+    }
+}
+
+
+
+OUTPUT:
+
+101
+nasrin banu s
+manager
+80000.0
+5
+EMPLOYEE DETAILS
+101
+nasrin banu s
+manager
+80000.0
+5
+
+
+
+task 1:
+
+
+import java.util.*;
+public class Main 
+{
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        
+        String s = sc.nextLine();
+        String b = sc.nextLine();
+        String d = sc.nextLine();
+        System.out.println(s);
+        System.out.println(b);
+        System.out.println(d);
+        
+    }
+}
+
+
+output:
+
+Hello,Java!
+WELCOME TO PROGRAMMING.
+My journey starts today.
