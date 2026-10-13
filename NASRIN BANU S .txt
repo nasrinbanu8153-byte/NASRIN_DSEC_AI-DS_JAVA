@@ -93,3 +93,142 @@ output:
 Hello,Java!
 WELCOME TO PROGRAMMING.
 My journey starts today.
+
+
+TASK 2:
+
+import java.util.*;
+public class Main 
+{
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("enter college name:");
+        String s = sc.nextLine();
+        System.out.println("enter department");
+        String b = sc.nextLine();
+        System.out.println("enter course:");
+        String d = sc.nextLine();
+        System.out.println(s);
+        System.out.println(b);
+        System.out.println(d);
+        
+    }
+}
+
+OUTPUT:
+
+enter college name:
+ABC Engineering College
+enter department
+cse
+enter course:
+java
+ABC Engineering College
+cse
+java
+
+
+
+TASK 3:
+
+import java.util.*;
+public class Main 
+{
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        
+        String s = sc.nextLine();
+        
+        String b = sc.nextLine();
+        
+        
+        System.out.print(s);
+        System.out.print(b);
+        
+        
+    }
+}
+
+OUTPUT:
+java is simple 
+java is powerful
+java is simple java is powerful
+
+
+TASK 5:
+import java.util.*;
+public class Main 
+{
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("enter student's name:");
+        String s = sc.nextLine();
+        System.out.println("enter age:"); 
+        int a = sc.nextInt();
+        sc.nextLine();
+        System.out.println("enter grade:");
+        String b = sc.nextLine();
+        System.out.println("enter placement status:");
+        String g = sc.nextLine();
+        System.out.println("EMPLOYEE DETAILS");
+        System.out.println(s);
+        System.out.println(a);
+        System.out.println(b);
+        System.out.println(g);
+        
+    }
+}
+
+OUTPUT:
+
+enter student's name:
+nasrin banu s
+enter age:
+19
+enter grade:
+o
+enter placement status:
+placed
+EMPLOYEE DETAILS
+nasrin banu s
+19
+o
+placed
+
+task 4: 
+
+import java.util.*;
+public class Main 
+{
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("enter student's name:");
+        String s = sc.nextLine();
+        System.out.println("enter course:"); 
+        String c = sc.nextLine();
+        System.out.println("enter level:");
+        String b = sc.nextLine();
+        System.out.println("name:\t"+ s + "\ncourse:\t"+ c + "\nlevel:\t"+ b);
+        
+        System.out.println(s);
+        System.out.println(c);
+        System.out.println(b);
+        
+        
+    }
+}
+
+output:
+
+enter student's name:
+nasrin
+enter course:
+java
+enter level:
+beginner
+name:	nasrin
+course:	java
+level:	beginner
+nasrin
+java
+beginner
