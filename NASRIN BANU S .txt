@@ -402,3 +402,133 @@ Output:
 enter number
 0
 zero
+**largest number:**
+import java.util.*;
+class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("enter number 1");
+        int a = sc.nextInt();
+        System.out.println("enter number 2");
+        int b = sc.nextInt();
+        System.out.println("enter number 3");
+        int c = sc.nextInt();
+        int largest = (a>=b && a>=c)?a:(b>=a && b>=c)?b:c;
+        System.out.println("largest number" +largest);
+    }
+}
+output:
+enter number 1
+9
+enter number 2
+8
+enter number 3
+78
+largest number78
+
+
+**last digit:**
+import java.util.*;
+class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("enter number ");
+        int a = sc.nextInt();
+        int positive_number = Math.abs(a);
+        int last_digit = positive_number % 10;
+        String digit = (last_digit % 2 == 0)? "yes":"no";
+        System.out.println(digit);
+    }
+}
+output:
+enter number 
+4572689
+no
+
+
+**divisible:**
+import java.util.*;
+class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("enter number ");
+        int a = sc.nextInt();
+        int b = 3;
+        int c = 5;
+        String divisible = (a % b == 0 && a % c == 0) ? "Divisible by Both" : "Not Divisible by Both";
+
+        System.out.println(divisible);
+    }
+} 
+output:
+enter number 
+567
+Not Divisible by Both
+
+
+**pass or fail:**
+import java.util.*;
+class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("enter mark 1 ");
+        int  a = sc.nextInt();
+        System.out.println("enter mark 2 ");
+        int  b = sc.nextInt();
+        System.out.println("enter mark 3 ");
+        int  c = sc.nextInt();
+        String passOrFail = (a>=35 && b>=35 && c>=35)? "pass":"fail";
+
+        System.out.println(passOrFail);
+    }
+}
+output:
+enter mark 1 
+80
+enter mark 2 
+56
+enter mark 3 
+12
+fail
+
+
+
+**delivery:**
+import java.util.*;
+class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("enter amount");
+        int  a = sc.nextInt();
+        System.out.println("premium membership status");
+        sc.nextLine();
+        String s = sc.nextLine();
+        String delivery = (a >= 1000 || s.equals("true")) ? "free delivery" : "no free delivery";
+
+        System.out.println(delivery);
+    }
+}
+output:
+enter amount
+3000
+premium membership status
+false
+free delivery
+
+
+**discount:**
+import java.util.*;
+class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("enter purchased amount");
+        int  price = sc.nextInt();
+        double finalBill = (price >= 2300) ? (price * 0.90) : price;
+
+        System.out.println(finalBill);
+    }
+}
+output:
+enter purchased amount
+6000
+5400.0
