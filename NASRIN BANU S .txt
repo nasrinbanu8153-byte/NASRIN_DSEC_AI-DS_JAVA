@@ -232,3 +232,173 @@ level:	beginner
 nasrin
 java
 beginner
+Task 12:
+import java.util.*;
+public class Main
+{
+public static void main(String[] args) {
+Scanner sc = new Scanner(System.in);
+System.out.println("enter Patient's full name");
+
+String s = sc.nextLine();
+System.out.println("enter Patient's id");
+int a = sc.nextInt();
+System.out.println("enter Patient's age");
+
+int b = sc.nextInt();
+System.out.println("enter Body temperature in farenheit");
+float f = sc.nextFloat();
+System.out.println("enter Admitted status");
+sc.nextLine();
+String h = sc.nextLine();
+System.out.println("PATIENT DETAILS");
+System.out.println(s);
+System.out.println(a);
+System.out.println(b);
+System.out.println(f);
+System.out.println(h);
+}
+}
+
+Output
+enter Patient's id
+101
+enter Patient's age
+18
+enter Body temperature in farenheit
+98.6
+enter Admitted status
+false
+PATIENT DETAILS
+nasrin
+101
+18
+98.6
+false
+
+
+Vote eligible:
+import java.util.*;
+class Main {
+public static void main(String[] args) {
+Scanner sc = new Scanner(System.in);
+System.out.println("enter age:");
+int a = sc.nextInt();
+String eligible = (a >= 18)?"eligible":"not eligible";
+System. out.println(eligible);
+
+}
+}
+
+Output:
+enter age:
+8
+not eligible
+
+Assignment:
+import java.util.*;
+
+class Main {
+public static void main(String[] args) {
+int balance = 5000;
+System.out.println("initialBalance");
+System.out.println(balance);
+balance += 1000;
+System.out.println("deposit");
+System.out.println(balance);
+balance -= 600;
+System.out.println("withdraw");
+System.out.println(balance);
+System.out.println("total");
+System.out.println(balance);
+
+}
+}
+
+output:
+
+initialBalance
+5000
+deposit
+6000
+withdraw
+5400
+total
+5400
+
+pass / fail:
+
+import java.util.*;
+class Main {
+public static void main(String[] args) {
+Scanner sc = new Scanner(System.in);
+
+int a= 20;
+int b = 40;
+String marks = (a >= b)? "pass":"fail";
+System.out.println(marks);
+}
+}
+
+output:
+fail
+
+Even or odd:
+import java.util.*;
+class Main {
+public static void main(String[] args) {
+Scanner sc = new Scanner(System.in);
+System.out.println("enter number");
+int a = sc.nextInt();
+
+String evenOrOdd = (a % 2 == 0 )? "even":"odd";
+System.out.println(evenOrOdd);
+
+
+}
+}
+Output:
+enter number
+4
+even
+
+Task 2:
+import java.util.*;
+class Main {
+public static void main(String[] args) {
+Scanner sc = new Scanner(System.in);
+System.out.println("enter number");
+int a = sc.nextInt();
+System.out.println("enter number");
+int b = sc.nextInt();
+String c = (a == b)?"equal":"not equal";
+System.out.println(c);
+
+
+
+}
+}
+Output:
+enter number
+4
+enter number
+6
+not equal
+
+
+Task 3:
+import java.util.*;
+class Main {
+public static void main(String[] args) {
+Scanner sc = new Scanner(System.in);
+System.out.println("enter number");
+int a = sc.nextInt();
+
+String find = (a>0)? "positive":(a<0)?"negative":"zero";
+System.out.println(find);
+}
+}
+Output:
+enter number
+0
+zero
