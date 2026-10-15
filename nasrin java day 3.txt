@@ -1,0 +1,188 @@
+1.IF:
+import java.util.*;
+public class Main {
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("enter bank balance");
+        int balance = sc.nextInt();
+        if(balance < 1000){
+            System.out.println("Low Balance Alert");
+        }
+    }
+}
+OUTPUT:
+enter bank balance
+500
+Low Balance Alert
+
+
+2.IF:
+import java.util.*;
+public class Main {
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("enter  score");
+        int score = sc.nextInt();
+        
+        if((score % 2 != 0 )){
+            System.out.println("Bonus Unlocked");
+        }
+    }
+}  
+OUTPUT:
+enter  score
+89
+Bonus Unlocked
+
+
+3.IF ELSE:
+import java.util.*;
+public class Main {
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("temperature in Celsius");
+        int temperature = sc.nextInt();
+        
+        if(temperature >= 30){
+            System.out.println("Warm Day");
+        }else{
+            System.out.println("Cool Day");
+        }
+    }
+}
+OUTPUT:
+temperature in Celsius
+54
+Warm Day
+
+4.IF ELSE:
+import java.util.*;
+public class Main {
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("ENTER NUMBER");
+        int digit  = sc.nextInt();
+        int positive_number = Math.abs(digit);
+        int last_digit = positive_number % 10;
+        
+        
+        if(last_digit == 7){
+            System.out.println("Lucky Ending ");
+        }else{
+            System.out.println("Not a Lucky Ending");
+        }
+    }
+}      
+   
+OUTPUT:
+ENTER NUMBER
+687
+Lucky Ending 
+
+
+5.IF ELSE:
+import java.util.*;
+public class Main {
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("enter purchase amount");
+        int amount  = sc.nextInt();
+        
+        
+        
+        if(amount >= 500){
+            System.out.println("Reusable Bag Available");
+        }else{
+            System.out.println("No Free Bag. ");
+        }
+    }
+} 
+
+OUTPUT:
+enter purchase amount
+600
+Reusable Bag Available
+
+6.ELSE if ladder:
+import java.util.*;
+public class Main {
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("enter mark");
+        int mark  = sc.nextInt();
+        if(mark>= 90 && mark<= 100){
+            System.out.println("A");
+        }else if(mark>=75 && mark<=89){
+            System.out.println("B");
+        }else if(mark>=60 && mark<=74){
+            System.out.println("C");
+        }else if(mark>=35 && mark<=59){
+            System.out.println("D");
+        }else if(mark < 35){
+            System.out.println("Fail");
+        }else{
+            
+            System.out.println("Invalid Mark");
+        }
+    }
+} 
+
+OUTPUT:
+enter mark
+99
+A
+
+
+7.ELSE if ladder:
+import java.util.*;
+public class Main {
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("enter the number of units ");
+        int units = sc.nextInt();
+        if(units < 100){
+            System.out.println("Low Consumption");
+        }else if(units>=100 && units<=199){
+            System.out.println("Medium Consumption");
+        }else if(units>=200 && units<=299){
+            System.out.println("High Consumption");
+        }else if(units >= 300){
+            System.out.println("Very High Consumption ");
+        }else{
+            
+            System.out.println("Invalid Units ");
+        }
+    }
+}
+
+OUTPUT:
+enter the number of units 
+800
+Very High Consumption 
+
+
+11.NESTED if:
+import java.util.*;
+public class Main {
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        
+        boolean usernameCorrect = sc.nextBoolean();
+        boolean passwordCorrect  = sc.nextBoolean();
+        if(usernameCorrect){
+            if(passwordCorrect){
+                System.out.println("Login Successful");
+            }else{
+                System.out.println("Incorrect Password."); 
+            }
+        }else{
+            System.out.println("Invalid Username");
+        }
+    }
+}  
+
+
+OUTPUT::
+true
+true
+Login Successful
