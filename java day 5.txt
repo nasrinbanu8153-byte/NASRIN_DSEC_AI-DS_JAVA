@@ -1,0 +1,26 @@
+import java.util.*;
+public class Main{
+    public static void main(String[] args){
+        
+        Scanner sc = new Scanner(System.in);
+        System.out.println("enter number");
+        int n = sc.nextInt();
+        int number = n;
+        int sum = 0;
+        int multiple = 1;
+        while(n > 0){
+            int digit = n % 10;
+            sum = sum + digit;
+            multiple = multiple * digit;
+            n = n/10;
+            
+        }
+        if(sum == multiple){
+            System.out.println("it is a spy number");
+        }else{
+            System.out.println("not a spy number");
+            
+        }
+        
+    }
+}
