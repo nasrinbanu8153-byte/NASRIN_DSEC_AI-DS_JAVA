@@ -16,8 +16,129 @@ public class Main {
             System.out.println(a[i]+" ");
    }
 }
+
 OUTPUT:
 10 
 20 
 30 
 40 
+
+2.SELECTION SORT:
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+        int a[] = {40,10,30,20};
+        for(int i = 0; i < a.length-1; i++){
+            int min = i;
+            for(int j = i+1; j < a.length; j++){
+                if(a[j]<a[min]){
+                    min = j;
+                }
+            }
+            int temp = a[i];
+            a[i]=a[min];
+            a[min] = temp;
+        }
+        for(int i = 0; i < a.length; i++)
+            System.out.println(a[i]+" ");
+    }
+}
+OUTPUT:
+10 
+20 
+30 
+40 
+3.INSERTION SORT:
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+        int a[] = {40,10,30,20};
+        for(int i = 0; i < a.length; i++){
+            int key = a[i];
+            int j = i-1;
+            while(j>=0&&a[j]>key){
+                a[j+1] = a[j];
+                j--;
+            }
+            a[j+1] = key;
+        }
+            
+        for(int i = 0; i < a.length; i++)
+            System.out.println(a[i]+" ");
+   }
+}
+OUTPUT:
+10 
+20 
+30 
+40 
+
+4.MERGE SORT:
+import java.util.*;
+
+public class Main {
+ 
+    static void mergeSort(int a[], int left, int right) {
+        if(left < right){
+            int mid = (left + right) / 2;
+            mergeSort(a, left, mid); 
+            mergeSort(a, mid + 1, right); 
+            merge(a, left, mid, right);
+        }
+    }
+    
+    static void merge(int a[], int left, int mid, int right){
+        int temp[] = new int[right - left + 1]; 
+        int i = left;  
+        int j = mid + 1;   
+        int k = 0;      
+        
+        while(i <= mid && j <= right){
+            if(a[i] <= a[j]){
+                temp[k++] = a[i++];
+            } else {
+                temp[k++] = a[j++];
+            }
+        }
+        
+        
+        while(i <= mid){
+            temp[k++] = a[i++];
+        }
+        
+        
+        while(j <= right){
+            temp[k++] = a[j++];
+        }
+        
+      
+        for(i = left; i <= right; i++) {
+            a[i] = temp[i - left];
+        }
+    }
+    
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        System.out.print("enter array size: ");
+        int n = sc.nextInt();
+        int a[] = new int[n];
+        System.out.println("enter array element");
+        for(int i = 0; i < n; i++){
+            a[i] = sc.nextInt();
+        }
+        
+        mergeSort(a, 0, n - 1);
+        
+        System.out.println("sorted array");
+        for(int i = 0; i < n; i++) {
+            System.out.print(a[i] + " ");
+        }
+        sc.close();
+    }
+}
+OUTPUT:
+enter array size: 7
+enter array element
+45 67 43 45 67 89 908
+sorted array
+43 45 45 67 67 89 908 
