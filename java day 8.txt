@@ -1,0 +1,290 @@
+1.TRANSPOSE:
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+    
+        int original[][] = new int[2][3]; 
+        
+        System.out.println("give 2*3 matrix:");
+        for(int i = 0; i < 2; i++){
+            for(int j = 0; j < 3; j++){
+                original[i][j] = sc.nextInt();
+            }
+        }
+        
+        int transpose[][] = new int[3][2]; 
+        
+        
+        for(int i = 0; i < 2; i++){
+            for(int j = 0; j < 3; j++){
+                transpose[j][i] = original[i][j]; 
+            }
+        }
+  
+        System.out.println("transposed matrix (3x2):");
+        for(int i = 0; i < 3; i++){
+            for(int j = 0; j < 2; j++){
+                System.out.print(transpose[i][j] + " ");
+            }
+            System.out.println(); 
+        }
+        
+        sc.close();
+    }
+}
+OUTPUT:
+give 2*3 matrix:
+1 2 3
+4 5 6
+transposed matrix (3x2):
+1 4 
+2 5 
+3 6
+ 
+2.TO DIAGNOL 3x3 MATRIX:
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+    
+        int a[][] = new int[3][3]; 
+        int sum = 0;
+        
+        for(int i = 0; i < 3; i++){
+            for(int j = 0; j < 3; j++){
+                a[i][j] = sc.nextInt();
+            }
+        }
+        for(int i = 0; i < 3; i++){
+            sum = sum + a[i][i];
+        }
+        
+  
+        System.out.println("diagnol sum:"+sum);
+    
+    }
+}
+OUTPUT:
+1 6 7 
+6 9 0
+5 4 3
+diagnol sum:13
+
+3.TO FIND IDENTICAL MATRIX:
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+    
+        int a[][] = new int[3][3]; 
+        boolean identity = true;
+        for(int i = 0; i < 3; i++){
+            for(int j = 0; j < 3; j++){
+                a[i][j] = sc.nextInt();
+            }
+        }
+        for(int i = 0; i < 3; i++){
+            for(int j = 0; j < 3; j++){
+                if(i == j && a[i][j] != 1){
+                    identity = false;
+                }else if(i != j && a[i][j] != 0){
+                    identity = false;
+                }
+            }
+        }
+        if(identity){
+            System.out.println("identity matrix");
+        }else{
+            System.out.println("not an identity matrix");
+        }
+        
+      
+    
+    }
+}
+OUTPUT:
+1 0 0
+0 1 0
+0 0 1
+identity matrix
+
+4.FIND LARGEST ELEMENT:
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int a[][] = new int[3][3]; 
+        for(int i = 0; i < 2; i++){
+            for(int j = 0; j < 3; j++){
+                a[i][j] = sc.nextInt();
+            }
+        }
+        int largest = a[0][0];
+        for(int i = 0; i < 2; i++){
+            for(int j = 0; j < 3; j++){
+                if(a[i][j] > largest){
+                    largest = a[i][j];
+                }
+            }
+        }
+        System.out.println("largest"+largest);
+    }
+}
+OUTPUT:
+2 3 4
+6 7 8
+largest8
+
+5.LENGTH IF STRING:
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String name = sc.nextLine();
+        int len = name.length();
+        System.out.print(len);
+    }
+}
+OUTPUT:
+nasrin
+6
+
+6.REVERSE THE STRING:
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String name = sc.nextLine();
+        String org = name;
+        String rev = "";
+        for(int i = name.length()-1;i>=0;i--){
+            rev = rev + name.charAt(i);
+        }
+        System.out.print(rev);
+    }
+}
+OUTPUT:
+nasrin
+nirsan
+
+7.PALINDROME:
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String name = sc.nextLine();
+        String org = name;
+        String rev = "";
+        for(int i = name.length()-1;i>=0;i--){
+            rev = rev + name.charAt(i);
+        }
+        System.out.println(rev);
+        if(org.equals(rev)){
+            System.out.println("it is a palindrome");
+        }else{
+            System.out.println("not a palindrome");
+        }
+    }
+}
+OUTPUT:
+level
+level
+it is a palindrome
+
+8.LENGTH OF VOWELS AND CONSONENTS:
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String name = sc.nextLine();
+        int vowels = 0, consonants = 0;
+        for(int i = 0; i<name.length(); i++){
+            char ch = name.charAt(i);
+            if(ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u' ){
+                vowels++;
+            }
+            else{
+                consonants++;
+            }
+        }
+        System.out.println(vowels);
+        System.out.println(consonants);
+    }
+}
+OUTPUT:
+nandhini
+3
+5
+
+9.REVERSE STRING WITH SPACE:
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String s = sc.nextLine();
+        String[] words = s.split(" ");
+        String result = "";
+        for (int i = 0; i < words.length; i++) {
+            String word = words[i];
+            for (int j = word.length() - 1; j >= 0; j--) {
+                result += word.charAt(j);
+            }
+            if (i < words.length-1) {
+                result += " ";
+            }
+        }
+        System.out.println(result);
+    }
+}
+OUTPUT:
+java programming
+avaj gnimmargorp
+
+10.anagram:
+import java.util.Scanner;
+import java.util.Arrays;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        
+        System.out.println("Enter first word:");
+        String s1 = sc.nextLine();
+        
+        System.out.println("Enter second word:");
+        String s2 = sc.nextLine();
+        
+        
+        if (s1.length() != s2.length()) {
+            System.out.println("Not Anagram");
+        } else {
+         
+            char[] a = s1.toCharArray();
+            char[] b = s2.toCharArray();
+            
+          
+            Arrays.sort(a);
+            Arrays.sort(b);
+            
+            
+            if (Arrays.equals(a, b)) {
+                System.out.println("Anagram");
+            } else {
+                System.out.println("Not Anagram");
+            }
+        } 
+        
+        sc.close();
+    } 
+}
+OUTPUT:
+Enter first word:
+NASRIN
+Enter second word:
+NASRIN
+Anagram
+
