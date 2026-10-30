@@ -1,0 +1,242 @@
+1.TRIM SPACE:
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("enter a sentence:");
+        String s = sc.nextLine();
+        StringBuilder sb = new StringBuilder(s);
+        for(int i=0; i<sb.length();i++){
+            if(sb.charAt(i) == ' '){
+                sb.deleteCharAt(i);
+                i++;
+            }
+        }
+        System.out.println(sb);
+    }
+}
+OUTPUT:
+enter a sentence:
+C LANGUAGE
+CLANGUAGE
+
+2.DELETE 1ST AND LAST CHARACTER:
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("enter a word:");
+        String s = sc.nextLine();
+        StringBuilder sb = new StringBuilder(s);
+        if(sb.length() >= 2){
+            sb.deleteCharAt(sb.length()-1);
+            sb.deleteCharAt(0);
+            System.out.println(sb);
+        }else{
+            System.out.println("enter atleast 3 character");
+        }
+        
+    }
+}
+OUTPUT:
+enter a word:
+java is easy
+ava is eas
+
+3.REVERSE LAST 3 CHARACTERS :
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("enter a word:");
+        String s = sc.nextLine();
+        StringBuilder sb = new StringBuilder(s);
+        if(sb.length() >= 3){
+            StringBuilder last = new StringBuilder(sb.substring(sb.length() - 3));
+            last.reverse();
+            sb.replace(sb.length() - 3,sb.length(),last.toString());
+            System.out.println(sb);
+        }else{
+            System.out.println("enter atleast 3 character");
+        }
+        
+    }
+}
+OUTPUT:
+enter a word:
+java programming
+java programmgni
+
+4.BUFFER READER 
+import java.io.*;
+public class Main {
+    public static void main(String[] args) throws Exception {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        System.out.println("enter your name:");
+        String name = br.readLine();
+        System.out.println("Welcome " +name);
+    }
+}
+OUTPUT:
+enter your name:
+NASRIN
+Welcome NASRIN
+
+4.ELECTRICITY BILL:
+import java.io.*;
+public class Main {
+    public static void main(String[] args) throws Exception {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        System.out.println("enter electricity units:");
+        int units = Integer.parseInt(br.readLine());
+        double bill = 0;
+        if(units < 0){
+            System.out.println("invalid units");
+            return;
+        }
+        if(units <= 100){
+            bill = units * 2;
+        }
+        else if(units <= 200){
+            bill = (100 * 2)+(units - 100)*3;
+        }else{
+            bill = (100 * 2)+(100 * 3)+(units - 200)*5;
+        }
+        System.out.println("electricity bill = rs." +bill);
+    }
+}
+OUTPUT:
+enter electricity units:
+190
+electricity bill = rs.470.0
+
+5.WHAT ARE THE EVEN & ODD NUMBER BETWEEN TWO NUMBERS:
+import java.io.*;
+public class Main {
+    public static void main(String[] args) throws Exception {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        System.out.println("ENTER STARTING NUMBER:");
+        int start = Integer.parseInt(br.readLine());
+        System.out.println("ENTER ENDING NUMBER:");
+        int end = Integer.parseInt(br.readLine());
+        int even = 0, odd = 0;
+        for(int i = start; i <= end; i++){
+            if(i % 2 == 0){
+                even++;
+            }else{
+                odd ++;
+            }
+        }
+        System.out.println("Total Even numbers: " + even);
+        System.out.println("Total Odd numbers: " + odd);
+    }
+}
+output:
+ENTER STARTING NUMBER:
+200
+ENTER ENDING NUMBER:
+500
+Total Even numbers: 151
+Total Odd numbers: 150
+
+6.REMOVING VOWELS:
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("enter a word:");
+        String s = sc.nextLine();
+        StringBuilder sb = new StringBuilder(s);
+        for (int i = 0; i < sb.length(); i++) {
+            char ch = sb.charAt(i);
+            if(ch == 'a'|| ch == 'e'|| ch == 'i'|| ch == 'o'|| ch == 'u' || ch == 'A' || ch == 'E' || ch == 'I' || ch == 'O' || ch == 'U'){
+            sb.deleteCharAt(i); 
+                i--;
+            }
+        }
+        
+        System.out.println("Word after removing vowels: " + sb);
+    }
+}
+OUTPUT:
+enter a word:
+Welcome to Java Programming 
+Word after removing vowels: Wlcm t Jv Prgrmmng 
+
+7.REMOVE SPECIAL CHARACTERS:
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Input: ");
+        String s = sc.nextLine();
+        StringBuilder sb = new StringBuilder();
+        for (int i = 0; i < s.length(); i++) {
+            char ch = s.charAt(i);
+            if (Character.isLetterOrDigit(ch)) {
+                sb.append(ch); 
+            }
+        }
+        System.out.println("Output: " + sb);
+    }
+}
+OUTPUT:
+Input: 
+JAVA 123 #$@ PROGRAM#@MING
+Output: JAVA123PROGRAMMING
+
+8.ADD SERIAL NUMBERS:
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter total number of students: ");
+        int n = sc.nextInt();
+        sc.nextLine();
+        StringBuilder sb = new StringBuilder();
+        System.out.println("Enter names line by line:");
+        for (int i = 1; i <= n; i++) {
+            String name = sc.nextLine();
+        sb.append(i).append(". ").append(name).append("\n");
+        }
+        System.out.println("\nOutput:");
+        System.out.print(sb);
+    }
+}
+OUTPUT:
+nter total number of students: 5
+Enter names line by line:
+NASRIN
+BANU
+SAFRIN
+ASMA
+RESHMA
+
+Output:
+1. NASRIN
+2. BANU
+3. SAFRIN
+4. ASMA
+5. RESHMA
+
+9.REPLACE SPACES WITH HYPHEN:
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Input: ");
+        String s = sc.nextLine();
+        StringBuilder sb = new StringBuilder(s);
+        for (int i = 0; i < sb.length(); i++) {
+            if (sb.charAt(i) == ' ') {
+                sb.setCharAt(i, '-');
+            }
+        }
+        System.out.println("Output: " + sb);
+    }
+}
+OUTPUT:
+Input: 
+LEARN JAVA PROGRAMMING
+Output: LEARN-JAVA-PROGRAMMING
+
